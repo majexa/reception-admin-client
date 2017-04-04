@@ -21,6 +21,6 @@ module.exports = gulp.task('ngn-build', function () {
   gulp.src('index.html', {read: false})
     .pipe(ngnJs(opt))
     .pipe(ngnJs.reporter(reportOptions))
-    .pipe(ngnCss(opt))
-    .pipe(ngnCss.reporter(reportOptions));
+    //.pipe(ngnCss(opt))
+    //.pipe(ngnCss.reporter(reportOptions));
 });

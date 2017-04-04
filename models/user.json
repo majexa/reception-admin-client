@@ -7,6 +7,14 @@
     "_default": "Date.now"
   },
   {
+    "type": "text",
+    "name": "token",
+    "required": true,
+    "system": true,
+    "_unique": true,
+    "_default": "require('uuid').v4"
+  },
+  {
     "title": "Телефон",
     "type": "text",
     "name": "phone"

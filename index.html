@@ -2,17 +2,21 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Skills Admin</title>
+    <title>Reception Admin</title>
     <link rel="stylesheet" type="text/css" href="m/css/main.css">
-    <link rel="stylesheet" type="text/css" href="m/css/image.css">
-    <link rel="stylesheet" type="text/css" href="m/css/menu.css">
-    <link rel="stylesheet" type="text/css" href="m/css/layout.css">
-    <script src="m/js/config.js"></script>
     <script src="m/js/main.js"></script>
 </head>
 <body>
 <script>
-new Ngn.Skills.App();
+Ngn.serverConfig = {
+  host: 'localhost',
+  port: 8070
+};
+Ngn.serverConfig.url = function() {
+  return 'http://' + Ngn.serverConfig.host + ':' +
+    Ngn.serverConfig.port;
+};
+new Ngn.Reception.App();
 </script>
 </body>
 </html>

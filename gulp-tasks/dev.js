@@ -11,11 +11,10 @@ module.exports = gulp.task('dev', function () {
   gulp.watch('index.html', ['copy-index']);
   gulp.watch('m/**/*', ['copy-m']);
   gulp.watch([
-      process.env.NGN_ENV_FOLDER + '/ngn/i/js/ngn/**/*.js',
-      process.env.NGN_ENV_FOLDER + '/ngn/i/css/**/*.css',
-    'm/**/*'
+    'src/js/**/*',
+    process.env.NGN_ENV_FOLDER + '/ngn/i/js/ngn/**/*.js',
+    process.env.NGN_ENV_FOLDER + '/ngn/i/css/**/*.css'
   ], ['ngn-build']);
-
   gulp.watch([
     'build/public/m/css/*.css',
     'build/public/m/js/*.js',

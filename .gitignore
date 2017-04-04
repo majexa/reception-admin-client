@@ -5,3 +5,4 @@ node_modules
 u/*
 m/js/cache/*
 config.js
+src/formTmpl/*
