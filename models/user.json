@@ -16,11 +16,11 @@
   },
   {
     "title": "Телефон",
-    "type": "text",
+    "type": "phone",
     "name": "phone"
   },
   {
-    "title": "Device token",
+    "title": "Device Token",
     "type": "text",
     "name": "deviceToken"
   }

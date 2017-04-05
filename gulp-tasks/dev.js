@@ -10,6 +10,7 @@ module.exports = gulp.task('dev', function () {
   });
   gulp.watch('index.html', ['copy-index']);
   gulp.watch('m/**/*', ['copy-m']);
+  gulp.watch('u/**/*', ['copy-u']);
   gulp.watch([
     'src/js/**/*',
     process.env.NGN_ENV_FOLDER + '/ngn/i/js/ngn/**/*.js',
@@ -18,13 +19,15 @@ module.exports = gulp.task('dev', function () {
   gulp.watch([
     'build/public/m/css/*.css',
     'build/public/m/js/*.js',
+    'build/public/u/js/cache/form/*.js',
     'build/public/index.html'
   ]).on('change', function() {
     setTimeout(function () {
       browserSync.reload()
     }, 500)
   });
+
   gulp.watch([
     'models/*.json'
-  ], ['mongoose-scheme-gen', 'crud-routes-gen', 'ngn-form-build']);
+  ], ['mongoose-scheme-gen', 'crud-routes-gen', 'ngn-build']);
 });
