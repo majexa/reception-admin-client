@@ -20,8 +20,20 @@
     "name": "phone"
   },
   {
+    "title": "Адрес",
+    "type": "text",
+    "name": "address"
+  },
+  {
+    "title": "Координада",
+    "type": "text",
+    "system": true,
+    "name": "geoPosition"
+  },
+  {
     "title": "Device Token",
     "type": "text",
+    "system": true,
     "name": "deviceToken"
   }
 ]
